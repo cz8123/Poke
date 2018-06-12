@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'xadmin',
     'crispy_forms',
     'django_filters',# pip install django-filter
-    'corsheaders',# 跨域
+    # 'corsheaders',# 跨域
 ]
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
@@ -57,7 +57,7 @@ REST_FRAMEWORK = {
 } 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.congzhu.pw', '47.106.180.139']
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',
+    # 'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -66,10 +66,10 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-CORS_ORIGIN_ALLOW_ALL = True
-CORS_ORIGIN_WHITELIST = (
-    'http://127.0.0.1:8080','http://127.0.0.1:8080/'
-)
+# CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_WHITELIST = (
+#     'http://127.0.0.1:8080','http://127.0.0.1:8080/'
+# )
 ROOT_URLCONF = 'pokemon.urls'
 
 TEMPLATES = [
@@ -105,7 +105,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'test',
         'USER': 'root',
-        'PASSWORD': '666666',
+        'PASSWORD': 'a666666b',
         'HOST':'localhost',
         'PORT':'3306',
         'OPTIONS': {'charset':'utf8mb4'},
