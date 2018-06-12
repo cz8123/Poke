@@ -73,7 +73,7 @@ def pgl(request, s=310):
         context['allpoke'] = allpoke
         return HttpResponse(json.dumps(context), content_type='application/json')
     for n in ['1', '2', '5', '6']:
-        context['s%s'%n] = ranklist(s, n, 10)
+        context['s%s'%n] = ranklist(s, n, 1)
     context['updateDate'] = updateDate(s)
     return HttpResponse(json.dumps(context), content_type='application/json')
     
