@@ -1,4 +1,4 @@
-import json, MySQLdb, requests, time
+import json, mysql.connector, requests, time
 from django.http import HttpResponse 
 from django.views.decorators.csrf import csrf_exempt
 from poke.serializers import PokemonSerializer, TypeSerializer
@@ -7,16 +7,16 @@ from poke.models import Pokemon, Type
 database = {'db':'pgl','user':'root', 'passwd':'666666','host':'localhost', 'charset':'utf8'}
 
 def allpokelist():
-    conn = MySQLdb.connect(**database)
+    conn = mysql.connector.connect(**database)
     cur = conn.cursor()
     cur.execute('select value from pgl_getSeasonPokemon where name=%s',('pglPokemon',))
     a = cur.fetchall()[0][0]
     cur.close()
     conn.close()
-    return a
+    return a.decode('utf-8')
 
 def ranklist(s, n, rank):
-    conn = MySQLdb.connect(**database)
+    conn = mysql.connector.connect(**database)
     cur = conn.cursor()
     cur.execute('select value from pgl_getseasonpokemon where name=%s', ('ranking%s-%s'%(s, n), ))
     rank_list = json.loads(cur.fetchall()[0][0])
@@ -25,7 +25,7 @@ def ranklist(s, n, rank):
     return rank_list[:rank]
 
 def updateDate(s):
-    conn = MySQLdb.connect(**database)
+    conn = mysql.connector.connect(**database)
     cur = conn.cursor()
     cur.execute('select value from pgl_getseasonpokemon where name=%s', ('updateDate%s'%s, ))
     updateDate = json.loads(cur.fetchall()[0][0])
@@ -34,13 +34,13 @@ def updateDate(s):
     return updateDate
 
 def getpokemonDetail(s, n, id_):
-    conn = MySQLdb.connect(**database)
+    conn = mysql.connector.connect(**database)
     cur = conn.cursor()
     cur.execute('select value from pgl_getseasonpokemonD_%s_%s where name=%%s'%(s, n),(id_, ))
     r = cur.fetchall()[0][0]
     cur.close()
     conn.close()
-    return r
+    return r.decode('utf-8')
 
 @csrf_exempt
 def pgl(request, s=310):
