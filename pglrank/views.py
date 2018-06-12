@@ -36,7 +36,7 @@ def updateDate(s):
 def getpokemonDetail(s, n, id_):
     conn = mysql.connector.connect(**database)
     cur = conn.cursor()
-    cur.execute('select value from pgl_getseasonpokemonD_%s_%s where name=%%s'%(s, n),(id_, ))
+    cur.execute('select value from pgl_getseasonpokemond_%s_%s where name=%%s'%(s, n),(id_, ))
     r = cur.fetchall()[0][0]
     cur.close()
     conn.close()
