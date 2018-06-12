@@ -9,7 +9,7 @@ database = {'db':'pgl','user':'root', 'passwd':'a666666b','host':'localhost', 'c
 def allpokelist():
     conn = mysql.connector.connect(**database)
     cur = conn.cursor()
-    cur.execute('select value from pgl_getSeasonPokemon where name=%s',('pglPokemon',))
+    cur.execute('select value from pgl_getseasonpokemon where name=%s',('pglPokemon',))
     a = cur.fetchall()[0][0]
     cur.close()
     conn.close()
