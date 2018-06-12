@@ -4,7 +4,7 @@ from django.views.decorators.csrf import csrf_exempt
 from poke.serializers import PokemonSerializer, TypeSerializer
 from poke.models import Pokemon, Type
 
-database = {'db':'pgl','user':'root', 'passwd':'666666','host':'localhost', 'charset':'utf8'}
+database = {'db':'pgl','user':'root', 'passwd':'a666666b','host':'localhost', 'charset':'utf8'}
 
 def allpokelist():
     conn = mysql.connector.connect(**database)
@@ -73,7 +73,7 @@ def pgl(request, s=310):
         context['allpoke'] = allpoke
         return HttpResponse(json.dumps(context), content_type='application/json')
     for n in ['1', '2', '5', '6']:
-        context['s%s'%n] = ranklist(s, n, 1)
+        context['s%s'%n] = ranklist(s, n, 104)
     context['updateDate'] = updateDate(s)
     return HttpResponse(json.dumps(context), content_type='application/json')
     
