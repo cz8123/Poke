@@ -26,7 +26,7 @@ SECRET_KEY = 'n%syj5omft9j$8^a-w_jjaygtrm^o41m135oz!d07r#fmw&ywj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.congzhu.pw', '47.106.180.139']
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 # Application definition
@@ -55,7 +55,7 @@ REST_FRAMEWORK = {
     # 'PAGE_SIZE': 10, # 分页
     # 'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',),
 } 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.congzhu.pw', '47.106.180.139']
+
 MIDDLEWARE = [
     # 'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
