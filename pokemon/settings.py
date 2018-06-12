@@ -41,8 +41,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'poke',
     'pglrank',
-    'xadmin',
-    'crispy_forms',
+    # 'xadmin',
+    # 'crispy_forms',
     'django_filters',# pip install django-filter
     # 'corsheaders',# 跨域
 ]
