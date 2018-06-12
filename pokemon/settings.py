@@ -24,8 +24,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'n%syj5omft9j$8^a-w_jjaygtrm^o41m135oz!d07r#fmw&ywj'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
+# DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.congzhu.pw', '47.106.180.139']
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
