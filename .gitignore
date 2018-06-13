@@ -3,6 +3,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 /static
+/pglrank/database.py
 /poke/migrations/
 /pglrank/migrations/
 /pokemon/local_settings.py

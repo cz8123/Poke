@@ -3,8 +3,8 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from poke.serializers import PokemonSerializer, TypeSerializer
 from poke.models import Pokemon, Type
+from .database import database
 
-database = {'db':'pgl','user':'root', 'passwd':'a666666b','host':'localhost', 'charset':'utf8'}
 
 def allpokelist():
     conn = mysql.connector.connect(**database)
