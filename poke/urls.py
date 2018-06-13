@@ -4,12 +4,12 @@ from .views import *
 from rest_framework.urlpatterns import format_suffix_patterns
 
 app_name = 'poke'
-pokemon_list = PokemonViewSet.as_view({'get':'list', 'post':'create'})
-pokemon_detail = PokemonViewSet.as_view({'get': 'retrieve', 'put': 'update', 'patch':'partial_update','delete':'destroy'})
-type_list = TypeViewSet.as_view({'get':'list', 'post':'create'})
-type_detail = TypeViewSet.as_view({'get': 'retrieve', 'put': 'update', 'patch':'partial_update','delete':'destroy'})
-ability_list = AbilityViewSet.as_view({'get':'list', 'post':'create'})
-ability_detail = AbilityViewSet.as_view({'get': 'retrieve', 'put': 'update', 'patch':'partial_update','delete':'destroy'})
+pokemon_list = PokemonViewSet.as_view({'get':'list'}) # 'post':'create'
+pokemon_detail = PokemonViewSet.as_view({'get': 'retrieve'}) # 'put': 'update', 'patch':'partial_update','delete':'destroy'
+type_list = TypeViewSet.as_view({'get':'list'})
+type_detail = TypeViewSet.as_view({'get': 'retrieve'})
+ability_list = AbilityViewSet.as_view({'get':'list'})
+ability_detail = AbilityViewSet.as_view({'get': 'retrieve'})
 
 urlpatterns = format_suffix_patterns([
     path('', api_root),
