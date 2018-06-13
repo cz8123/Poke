@@ -11,6 +11,7 @@ __pycache__/
 /.vscode
 
 # C extensions
+.png
 *.so
 *.xls
 *.xlsx
