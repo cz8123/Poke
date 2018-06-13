@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-# import xadmin
+import xadmin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from rest_framework.documentation import include_docs_urls # pip install coreapi
@@ -30,7 +30,7 @@ router.register(r'item', views.ItemViewSet)
 router.register(r'category', views.CategoryViewSet)
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('xadmin/', xadmin.site.urls),
     path('', include(router.urls)),
     path('docs', include_docs_urls(title='pokemon rest')),
     path('', include('pglrank.urls', namespace='pglrank')),
