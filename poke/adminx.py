@@ -2,7 +2,7 @@ import xadmin
 from .models import *
 
 class PokemonAdmin():
-    list_display = ['num', 'name', 'name1', 'name_en', 'hp', 'atk', 'defen', 'satk', 'sdef', 'sp', 'type1', 'type2', 'ability1', 'ability2', 'icon']
+    list_display = ['num', 'name', 'name1', 'name_en', 'hp', 'atk', 'defen', 'satk', 'sdef', 'sp', 'type1', 'type2', 'ability1', 'ability2', 'category']
     search_fields = ['num', 'name']
     list_filter = ['num', 'name', 'type1', 'type2']
 class TypeAdmin():
