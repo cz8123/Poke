@@ -1,0 +1,130 @@
+.statform input.inputform {
+	display: block;
+	padding: 1px;
+	margin: 2px 3px 1px 1px;
+	width: 104px;
+	height: 20px;
+}
+.statform {
+	padding: 3px 3px 3px 3px;
+	font-size: 10pt;
+}
+.statform .labelcol {
+	width: 30px;
+	text-align: center;
+	padding: 0px 0px 0px 0px;
+}
+.statform p.suggested {
+	margin: 5px 0;
+}
+.statform .col > div {
+	padding-top: 1px;
+	height: 28px;
+}
+.statform .col div label,
+.statform .col div em,
+.statform .col div b {
+	display: block;
+	padding: 5px 0 0 0;
+}
+.statform .col {
+	float: left;
+	width: 52px;
+	text-align: right;
+	font-size: 10pt;
+}
+.statform .basestatscol {
+	width: 30px;
+	padding: 0px 0px 0px 0px;
+}
+.statform .statscol {
+	width: 36px;
+}
+.statform .statscol,
+.statform .statscol {
+	font-style: normal;
+	font-weight: bold;
+	padding: 0px 0px 0px 0px;
+}
+.statform .graphcol {
+	width: 185px;
+}
+.statform .graphcol div span {
+	margin: 3px 0 0 5px;
+	display: block;
+	height: 12px;
+	border-bottom: 1px solid #AAAAAA;
+	border-right: 1px solid #AAAAAA;
+	background: #CCCCCC;
+}
+.statform .evcol,
+.statform .ivcol {
+	margin: 3px 0 0 5px;
+	width: 50px;
+	text-align: center;
+	padding: 3px 0px 0px 0px;
+}
+
+.statform .nature {
+	width: 30px;
+	text-align: center;
+	padding: 3px 0px 0px 0px;
+}
+.statform .evslidercol {
+	width: 190px;
+	margin-right: 9px;
+	margin-left: 5px;
+	padding-top: 4px;
+	text-align: center;
+	padding: 3px 0px 0px 3px;
+}
+.evslider {
+	width: 192px;
+	margin: 0 auto;
+}
+.statform .totalev b {
+	color: #DD2222;
+}
+.statform .totalev em {
+	font-style: normal;
+}
+.statform input.numform {
+	width: 40px;
+	height: 16px;
+	font-size: 9pt;
+}
+.textbox {
+	border: 1px solid #AAAAAA;
+	border-radius: 3px;
+	padding: 2px 3px;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-size: 9pt;
+
+	box-shadow: inset 0px 1px 2px #CCCCCC, 1px 1px 0 rgba(255,255,255,.6);
+	background: #F8FBFD;
+	color: black;
+}
+.textbox:hover {
+	border-color: #474747;
+	box-shadow: inset 0px 1px 2px #D2D2D2, 1px 1px 0 rgba(255,255,255,.6);
+	background: #FFFFFF;
+}
+.label .textbox {
+	display: block;
+}
+
+.img-wrap{
+	width:132px;
+	height:160px;
+	float:left;
+}
+.img-wrap1{
+	width:132px;
+	height:25px;
+}
+.img-wrap2{
+	width:132px;
+	/*height:140px;*/
+}
+
+
