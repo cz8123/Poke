@@ -8,7 +8,7 @@ __pycache__/
 /pglrank/migrations/
 /pokemon/local_settings.py
 /.vscode
-
+/static/img/
 # C extensions
 .png
 *.so
