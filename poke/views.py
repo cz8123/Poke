@@ -30,42 +30,42 @@ class ItemPage(PokePage):
     page_size = 150
 class PokemonViewSet(viewsets.ModelViewSet):
 	permission_classes = (permissions.IsAuthenticatedOrReadOnly, )
-    pagination_class = PokePage
-    queryset = Pokemon.objects.all()
-    serializer_class = PokemonSerializer
-    filter_backends = (DjangoFilterBackend,filters.SearchFilter,filters.OrderingFilter)
-    filter_class = PokemonFilter
-    search_fields = ('name', '=num')
+	pagination_class = PokePage
+	queryset = Pokemon.objects.all()
+	serializer_class = PokemonSerializer
+	filter_backends = (DjangoFilterBackend,filters.SearchFilter,filters.OrderingFilter)
+	filter_class = PokemonFilter
+	search_fields = ('name', '=num')
     # ordering_fields = ('num',)
 class TypeViewSet(viewsets.ModelViewSet):
 	permission_classes = (permissions.IsAuthenticatedOrReadOnly, )
-    queryset = Type.objects.all()
-    serializer_class = TypeSerializer
-    filter_backends = (DjangoFilterBackend,filters.SearchFilter)
-    search_fields = ('name',)
+	queryset = Type.objects.all()
+	serializer_class = TypeSerializer
+	filter_backends = (DjangoFilterBackend,filters.SearchFilter)
+	search_fields = ('name',)
 class AbilityViewSet(viewsets.ModelViewSet):
 	permission_classes = (permissions.IsAuthenticatedOrReadOnly, )
-    pagination_class = AbilityPage
-    queryset = Ability.objects.all()
-    serializer_class = AbilitySerializer
-    filter_backends = (DjangoFilterBackend,filters.SearchFilter)
-    search_fields = ('name',)
+	pagination_class = AbilityPage
+	queryset = Ability.objects.all()
+	serializer_class = AbilitySerializer
+	filter_backends = (DjangoFilterBackend,filters.SearchFilter)
+	search_fields = ('name',)
 class MoveViewSet(viewsets.ModelViewSet):
 	permission_classes = (permissions.IsAuthenticatedOrReadOnly, )
-    pagination_class = MovePage
-    queryset = Move.objects.all()
-    serializer_class = MoveSerializer
-    filter_backends = (DjangoFilterBackend,filters.SearchFilter)
-    search_fields = ('name',)
+	pagination_class = MovePage
+	queryset = Move.objects.all()
+	serializer_class = MoveSerializer
+	filter_backends = (DjangoFilterBackend,filters.SearchFilter)
+	search_fields = ('name',)
 class ItemViewSet(viewsets.ModelViewSet):
 	permission_classes = (permissions.IsAuthenticatedOrReadOnly, )
-    pagination_class = ItemPage
-    queryset = Item.objects.all()
-    serializer_class = ItemSerializer
-    filter_backends = (DjangoFilterBackend,filters.SearchFilter)
-    search_fields = ('name',)
+	pagination_class = ItemPage
+	queryset = Item.objects.all()
+	serializer_class = ItemSerializer
+	filter_backends = (DjangoFilterBackend,filters.SearchFilter)
+	search_fields = ('name',)
 class CategoryViewSet(viewsets.ModelViewSet):
 	permission_classes = (permissions.IsAuthenticatedOrReadOnly, )
-    pagination_class = PokePage
-    queryset = Category.objects.all()
-    serializer_class = CategorySerializer
+	pagination_class = PokePage
+	queryset = Category.objects.all()
+	serializer_class = CategorySerializer
