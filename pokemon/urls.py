@@ -36,5 +36,5 @@ urlpatterns = [
     path('', include('pglrank.urls', namespace='pglrank')),
     path('index/', TemplateView.as_view(template_name='index.html')),
     # path('', include('poke.urls', namespace='poke')),
-    # path('api-root/', include('rest_framework.urls', namespace='rest_framework')),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]

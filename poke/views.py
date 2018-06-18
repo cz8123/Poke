@@ -7,6 +7,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
 from rest_framework.pagination import PageNumberPagination
+from rest_framework import permissions
 
 # @api_view(['GET'])
 # def api_root(request, format=None):
@@ -28,6 +29,7 @@ class MovePage(PokePage):
 class ItemPage(PokePage):
     page_size = 150
 class PokemonViewSet(viewsets.ModelViewSet):
+	permission_classes = (permissions.IsAuthenticatedOrReadOnly, )
     pagination_class = PokePage
     queryset = Pokemon.objects.all()
     serializer_class = PokemonSerializer
@@ -36,29 +38,34 @@ class PokemonViewSet(viewsets.ModelViewSet):
     search_fields = ('name', '=num')
     # ordering_fields = ('num',)
 class TypeViewSet(viewsets.ModelViewSet):
+	permission_classes = (permissions.IsAuthenticatedOrReadOnly, )
     queryset = Type.objects.all()
     serializer_class = TypeSerializer
     filter_backends = (DjangoFilterBackend,filters.SearchFilter)
     search_fields = ('name',)
 class AbilityViewSet(viewsets.ModelViewSet):
+	permission_classes = (permissions.IsAuthenticatedOrReadOnly, )
     pagination_class = AbilityPage
     queryset = Ability.objects.all()
     serializer_class = AbilitySerializer
     filter_backends = (DjangoFilterBackend,filters.SearchFilter)
     search_fields = ('name',)
 class MoveViewSet(viewsets.ModelViewSet):
+	permission_classes = (permissions.IsAuthenticatedOrReadOnly, )
     pagination_class = MovePage
     queryset = Move.objects.all()
     serializer_class = MoveSerializer
     filter_backends = (DjangoFilterBackend,filters.SearchFilter)
     search_fields = ('name',)
 class ItemViewSet(viewsets.ModelViewSet):
+	permission_classes = (permissions.IsAuthenticatedOrReadOnly, )
     pagination_class = ItemPage
     queryset = Item.objects.all()
     serializer_class = ItemSerializer
     filter_backends = (DjangoFilterBackend,filters.SearchFilter)
     search_fields = ('name',)
 class CategoryViewSet(viewsets.ModelViewSet):
+	permission_classes = (permissions.IsAuthenticatedOrReadOnly, )
     pagination_class = PokePage
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
